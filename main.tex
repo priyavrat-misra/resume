@@ -1,0 +1,269 @@
+%-------------------------
+% Resume in Latex
+% Author : Abey George
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+\RequirePackage{tikz}
+\RequirePackage{xcolor}
+\RequirePackage{fontawesome}
+\usepackage{tikz}
+\usetikzlibrary{svg.path}
+
+
+\definecolor{cvblue}{HTML}{0E5484}
+\definecolor{black}{HTML}{130810}
+\definecolor{darkcolor}{HTML}{0F4539}
+\definecolor{cvgreen}{HTML}{3BD80D}
+\definecolor{taggreen}{HTML}{00E278}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{name}{black}
+\colorlet{tagline}{darkcolor}
+\colorlet{heading}{darkcolor}
+\colorlet{headingrule}{cvblue}
+\colorlet{accent}{darkcolor}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+% \pagestyle{fancy}
+% \fancyhf{}  % clear all header and footer fields
+% \fancyfoot{}
+% \renewcommand{\headrulewidth}{0pt}
+% \renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\large#1} & \textbf{\small #2} \\
+      \textit{\large#3} & \textit{\small #4} \\
+      
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+
+\newcommand\sbullet[1][.5]{\mathbin{\vcenter{\hbox{\scalebox{#1}{$\bullet$}}}}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+	{\Huge \scshape Priyavrat Misra} \\ \vspace{1pt}
+	Brahmapur, Odisha \\ \vspace{1pt}
+	\href{mailto:cse.pm@pm.me}{\raisebox{-0.2\height}\faEnvelope\  \underline{cse.pm@pm.me}} ~
+	\href{https://linkedin.com/in/priyavrat-misra}{\raisebox{-0.2\height}\faLinkedinSquare\ \underline{priyavrat-misra}}  ~
+	\href{https://github.com/priyavrat-misra}{\raisebox{-0.2\height}\faGithub\ \underline{priyavrat-misra}}
+	\vspace{-8pt}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{EDUCATION}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Parala Maharaja Engineering College}{2017 -- 2021}
+{Bachelor of Technology - \textbf{CGPA} - \textbf{8.64}}{Brahmapur, India}
+    
+\textbf{Relevant Coursework}:
+\vspace{3pt}
+\begin{multicols}{3}
+	\begin{itemize}[itemsep=-2pt, parsep=5pt]
+		\item Programming \& Data Structures
+		\item Design \& Analysis of Algorithms
+		\item Operating Systems
+		\item Computer Organization \& Architecture
+		\item Database Management Systems
+		\item Theory of Computation
+		\item Compiler Design
+		\item Computer Networks
+	\end{itemize}
+\end{multicols}
+\vspace*{.33\multicolsep}
+\resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{PROJECTS}
+    \vspace{-5pt}
+    \resumeSubHeadingListStart
+       \resumeProjectHeading
+          {\textbf{\large{\href{https://github.com/priyavrat-misra/xrays-and-gradcam}{Classification \& Gradient-based Localization of Chest Radiographs}}} \raisebox{-0.1\height}\faExternalLink }{Apr 2021}
+          \resumeItemListStart
+            \resumeItem{\normalsize{uses numerous concepts from Deep Learning to diagnose COVID-19 \& other inflammatory lung diseases from frontal-view digital Chest X-Rays.}}
+          \resumeItemListEnd
+      \vspace{-13pt}
+          
+      \resumeProjectHeading
+          {\textbf{\large{\href{https://github.com/priyavrat-misra/scifi-lorem}{Sci-fi Lorem}}} \raisebox{-0.1\height}\faExternalLink }{Jan 2021}
+          \resumeItemListStart
+            \resumeItem{\normalsize{employs character-level language models (char-RNNs) to train an AI tool which can generate random and somewhat meaningful sci-fi word sequences.}}
+          \resumeItemListEnd
+      \vspace{-13pt}
+          
+      \resumeProjectHeading
+          {\textbf{\large{\href{https://github.com/priyavrat-misra/image-colorization}{Image Colorization}}} \raisebox{-0.1\height}\faExternalLink }{Dec 2020}
+          \resumeItemListStart
+            \resumeItem{\normalsize{uses Deep Residual Networks trained on Places365 dataset, to colorize black \& white images.}}
+          \resumeItemListEnd
+      \vspace{-13pt}
+          
+      \resumeProjectHeading
+          {\textbf{\large{Other projects:}}}{Nov 2020}
+          \resumeItemListStart
+            \resumeItem{\normalsize{\textbf{\href{https://github.com/priyavrat-misra/handwritten-digit-classification}{Handwritten Digit Classification}}} \raisebox{-0.1\height}\faExternalLink: evaluates \& benchmarks various types of Neural Networks on image data, using MNIST handwritten digits dataset as an example.}
+            \resumeItem{\normalsize{\textbf{\href{https://github.com/priyavrat-misra/neural-style-transfer}{Neural Style Transfer}}} \raisebox{-0.1\height}\faExternalLink: uses CNN's feature extraction abilities to transfer style of an image to another.}
+            \resumeItem{\normalsize{\textbf{\href{https://github.com/priyavrat-misra/convolutional-autoencoder}{Autoencoder for Image Compression}}} \raisebox{-0.1\height}\faExternalLink: reduces image size by up to 75\% after compression, \& achieves a near-lossless image quality after decompression.}
+            \resumeItem{\normalsize{\textbf{\href{https://github.com/priyavrat-misra/denoising-autoencoder}{Denoising Autoencoder}}} \raisebox{-0.1\height}\faExternalLink: constructs higher level representations of noisy images by identifying \& utilizing useful features in them.}
+          \resumeItemListEnd
+          
+    \resumeSubHeadingListEnd
+\vspace{-12pt}
+
+
+%-----------EXPERIENCE-----------
+\section{INTERNSHIP}
+    \resumeSubHeadingListStart
+      \resumeSubheading
+        {Indian Institute of Science Education and Research (IISER)}{Feb 2020} 
+        {\underline{Student Intern}}{Brahmapur, India}
+        \resumeItemListStart
+          \resumeItem{\normalsize{simulated \textit{www.iiserbpr.ac.in} using Java, HTML, CSS, MySQL \& Apache Tomcat, and gained an fundamental understanding of how websites work in general.}}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
+\vspace{-12pt}
+
+
+%-----------PROGRAMMING SKILLS-----------
+\section{TECHNICAL SKILLS}
+\begin{itemize}[leftmargin=0.15in, label={}]
+	\small{\item{
+		\textbf{\normalsize{Languages:}}{ \normalsize{C/C++, Python, SQL, Java, HTML, CSS, MIPS Assembly}} \\
+		\textbf{\normalsize{Developer Tools:}}{ \normalsize{Vim, GNU Compiler Collection (GCC), Windows Terminal, Windows Subsystem for Linux}} \\
+		\textbf{\normalsize{Technologies/Libraries:}}{\normalsize{ Linux, Git, PyTorch, NumPy, Matplotlib, pandas}} \\
+	}}
+\end{itemize}
+\vspace{-12pt}
+
+ 
+%-----------CERTIFICATIONS---------------
+\section{CERTIFICATIONS}
+\begin{multicols}{2}
+	\begin{itemize}[itemsep=-1pt, parsep=5pt]
+		\item {\href{https://graduation.udacity.com/confirm/ZFNDVDQU}{Deep Learning Nanodegree, \textit{Udacity}} {\raisebox{-0.1\height}\faExternalLink}}
+		\item {\href{https://www.coursera.org/account/accomplishments/specialization/EJWXYS5SBM2E}{Deep Learning Specialization, \textit{Coursera}} {\raisebox{-0.1\height}\faExternalLink}}
+		\item {\href{https://www.coursera.org/account/accomplishments/verify/DB2AH7JVG9KU}{Machine Learning, \textit{Coursera}} {\raisebox{-0.1\height}\faExternalLink}}
+		\item {\href{https://www.datacamp.com/statement-of-accomplishment/track/ca45219c995c9ea42262772e58872ae77889c14e}{Python Programmer Track, \textit{DataCamp}} {\raisebox{-0.1\height}\faExternalLink}}
+		\item {\href{https://www.coursera.org/account/accomplishments/specialization/LLHNWWQWQHQM}{AWS Fundamentals, \textit{Coursera}} {\raisebox{-0.1\height}\faExternalLink}}
+	\end{itemize}
+\end{multicols}
+\vspace*{0.5\multicolsep}
+
+
+%-----------INVOLVEMENT---------------
+\section{EXTRACURRICULAR}
+\resumeItemListStart[itemsep=2pt]
+\resumeItem{\normalsize{Received an Udacity Deep Learning Nanodegree scholarship for excellence among 15,000 participants. (2020)}}
+\resumeItem{\normalsize{Secured Gold in a Quiz contest organized by Inspire Science Camp, Department of Science \& Technology, Government of India. (2016)}}
+\resumeItem{\normalsize{Won Silver Medal in National Science Olympiad 2014-15, School-level.}}
+\resumeItem{\normalsize{Won Gold Medal in National Science Olympiad 2013-14, School-level \& City-level.}}
+\resumeItemListEnd
+
+\end{document}
