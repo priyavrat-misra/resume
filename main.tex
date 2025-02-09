@@ -1,260 +1,239 @@
-%-------------------------
-% Resume in Latex
-% Author : Abey George
-% Based off of: https://github.com/sb2nov/resume
-% License : MIT
-%------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Developer CV
+% LaTeX Class
+% Version 2.0 (12/10/23)
+%
+% This class originates from:
+% http://www.LaTeXTemplates.com
+%
+% Authors:
+% Omar Roldan
+% Based on a template by  Jan Vorisek (jan@vorisek.me)
+% Based on a template by Jan Küster (info@jankuester.com)
+% Modified for LaTeX Templates by Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% The MIT License (see included LICENSE file)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[letterpaper,11pt]{article}
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
 
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
-\usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
-\usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
-\usepackage[english]{babel}
-\usepackage{tabularx}
-\usepackage{fontawesome5}
+\documentclass[9pt]{util} % Default font size, values from 8-12pt are recommended
 \usepackage{multicol}
-\usepackage{graphicx}
-\setlength{\multicolsep}{-3.0pt}
-\setlength{\columnsep}{-1pt}
-\input{glyphtounicode}
-
-\RequirePackage{tikz}
-\RequirePackage{xcolor}
-\RequirePackage{fontawesome}
-\usepackage{tikz}
-\usetikzlibrary{svg.path}
-
-
-\definecolor{cvblue}{HTML}{0E5484}
-\definecolor{black}{HTML}{130810}
-\definecolor{darkcolor}{HTML}{0F4539}
-\definecolor{cvgreen}{HTML}{3BD80D}
-\definecolor{taggreen}{HTML}{00E278}
-\definecolor{SlateGrey}{HTML}{2E2E2E}
-\definecolor{LightGrey}{HTML}{666666}
-\colorlet{name}{black}
-\colorlet{tagline}{darkcolor}
-\colorlet{heading}{darkcolor}
-\colorlet{headingrule}{cvblue}
-\colorlet{accent}{darkcolor}
-\colorlet{emphasis}{SlateGrey}
-\colorlet{body}{LightGrey}
-
-
-
-%----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
-
-
-% \pagestyle{fancy}
-% \fancyhf{}  % clear all header and footer fields
-% \fancyfoot{}
-% \renewcommand{\headrulewidth}{0pt}
-% \renewcommand{\footrulewidth}{0pt}
-
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.6in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1.19in}
-\addtolength{\topmargin}{-.7in}
-\addtolength{\textheight}{1.4in}
-
-\urlstyle{same}
-
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
-
-% Sections formatting
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large\bfseries
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
-% Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
-
-%-------------------------
-% Custom commands
-\newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
-}
-
-\newcommand{\classesList}[4]{
-    \item\small{
-        {#1 #2 #3 #4 \vspace{-2pt}}
-  }
-}
-
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{\large#1} & \textbf{\small #2} \\
-      \textit{\large#3} & \textit{\small #4} \\
-      
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-
-\newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & \textbf{\small #2}\\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
-\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-
-
-\newcommand\sbullet[1][.5]{\mathbin{\vcenter{\hbox{\scalebox{#1}{$\bullet$}}}}}
-
-%-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{lipsum}
+\setlength{\columnsep}{0mm}
 
 
 \begin{document}
 
-%----------HEADING----------
-\begin{center}
-	{\Huge \scshape Priyavrat Misra}\\
-	\vspace{1pt}
-	\href{https://priyavr.at/}{https://priyavr.at/}\\
-	\vspace{8pt}	\href{mailto:priyavratmisra123@gmail.com}{\faEnvelope\  {priyavratmisra123@gmail.com}}  ~
-	\faPhone\ +91 84804 42313\\
-	\vspace{2pt}
-	\href{https://linkedin.com/in/priyavrat-misra}{\faLinkedinSquare\ \underline{LinkedIn}}  ~
-	\href{https://github.com/priyavrat-misra}{\faGithub\ \underline{GitHub}}
-	\vspace{-8pt}
-\end{center}
+\begin{minipage}[t]{0.5\textwidth} 
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+		
+	{ \fontsize{16}{20} \textcolor{black}{\textbf{\MakeUppercase{Priyavrat Misra}}}}
+		
+	\vspace{6pt}
+		
+	{\Large An Aspiring 10x Engineer}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.2\textwidth} % 20% of the page width for the first row of icons
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+		
+	% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
+	\icon{Globe}{11}{\href{https://priyavr.at}{https://priyavr.at}}\\ 
+	\icon{Phone}{11}{+91 84804 42313}\\
+	\icon{MapMarker}{11}{Odisha, India}\\
+		
+\end{minipage}
+\begin{minipage}[t]{0.27\textwidth} % 27% of the page width for the second row of icons
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+		
+	\icon{Envelope}{11}{\href{mailto:priyavratmisra123@gmail.com}{priyavratmisra123@gmail.com}}\\	
+	\icon{Github}{11}{\href{https://github.com/priyavrat-misra}{@priyavrat-misra}}\\
+	\icon{LinkedinSquare}{11}{\href{https://www.linkedin.com/in/priyavrat-misra}{@priyavrat-misra}}\\    
+	    
+\end{minipage}
 
+\begin{minipage}[t]{0.475\textwidth}
+	\cvsect{About}
+	\vspace{-6pt}
+	 
+	Software Engineer with a CS background, specializing in writing clean and efficient code. Passionate about accessibility, algorithms, and deepening understanding of systems and architecture, alongside an enthusiasm for blogging learnings and scrutinizing open-source software.
+	
+\end{minipage}
+\hfill % Whitespace between
+\begin{minipage}[t]{0.475\textwidth}
+	\cvsect{Technical Expertise}
+	\vspace{-6pt}
+	    
+	\begin{minipage}[t]{0.2\textwidth}
+		\textbf{Languages:}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.73\textwidth}
+		Java, C++, JavaScript, TypeScript, SQL, HTML, CSS, Markdown.  
+	\end{minipage}
+	\vspace{1mm}
+	    
+	\begin{minipage}[t]{0.2\textwidth}
+		\textbf{Frameworks:}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.73\textwidth}
+		Spring Boot, Angular.
+	\end{minipage}
+	\vspace{1mm}
+	    
+	\begin{minipage}[t]{0.2\textwidth}
+		\textbf{Libraries:}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.73\textwidth}
+		RxJS, SLF4J, Lombok, Apache POI.
+	\end{minipage}
+	\vspace{1mm}
+	       
+	\begin{minipage}[t]{0.2\textwidth}
+		\textbf{Tools:}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.73\textwidth}
+		Vim, Git, Make, Maven, axe DevTools.
+	\end{minipage}
+	\vspace{1mm}
+	    
+\end{minipage}
 
-%-----------EDUCATION-----------
-\section{EDUCATION}
-\resumeSubHeadingListStart
-\resumeSubheading
-{Parala Maharaja Engineering College}{2017 -- 2021}
-{Bachelor of Technology in Computer Science \& Engineering; GPA: 8.64}{Brahmapur, India}
-\resumeSubheading
-{Kendriya Vidyalaya}{2005 -- 2017}
-{Matriculation \& Senior School}{Brahmapur, India}
-\resumeSubHeadingListEnd
+\vspace{-10 pt}
 
+\cvsect{Experience}
+\begin{entrylist}
+	\entry
+	{{Jan '23 -- Present} \\\footnotesize{Hyderabad, India}}
+	{Member Technical -- Global Product \& Technology (GPT)}
+	{Automatic Data Processing, Inc.}
+	{\vspace{-10pt}
+		\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=-1pt]
+			\item Contributed to the development of a web-based onboarding application designed to enhance client-facing interactions with ADP's compliance products, driving innovative solutions and exceptional customer experiences.
+			\item Designed and implemented efficient APIs and optimized DML queries to facilitate seamless data exchange between multiple systems of records, ensuring robust integration and streamlined data flow.
+			\item Crafted responsive website interfaces that provided an intuitive and responsive user experience, prioritizing ease of use, accessibility, and overall usability.
+		\end{itemize}
+		\texttt{Java + Spring Boot} \slashsep \texttt{TypeScript + Angular} \slashsep \texttt{SQL}}
+	\entry
+	{{Feb '20 -- Mar '20} \\\footnotesize{Brahmapur, India}}
+	{Intern}
+	{Indian Institute of Science Education and Research}
+	{\vspace{-10pt}
+		\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=-1pt]
+			\item Contributed to enhancing the user interface of \textit{iiserbpr.ac.in}, improving usability and visual design for a more seamless user experience.
+			\item Collaborated closely with senior engineers, participating in educational sessions and gaining hands-on experience with industry-standard tools and technologies.
+		\end{itemize}
+		\texttt{Java} \slashsep \texttt{JavaScript} \slashsep \texttt{HTML} \slashsep \texttt{CSS}}
+\end{entrylist}
 
-%-----------PROJECTS-----------
-\section{PROJECTS}
-    \vspace{-5pt}
-    \resumeSubHeadingListStart
-       \resumeProjectHeading
-          {\textbf{\large{\href{https://github.com/priyavrat-misra/xrays-and-gradcam}{Classification \& Gradient-based Localization of Chest Radiographs}}} \raisebox{-0.1\height}\faExternalLink }{Apr 2021}
-          \resumeItemListStart
-            \resumeItem{\normalsize{uses numerous concepts from Deep Learning to diagnose COVID-19 \& other inflammatory lung diseases from frontal-view digital Chest X-Rays.}}
-          \resumeItemListEnd
-      \vspace{-13pt}
-          
-      \resumeProjectHeading
-          {\textbf{\large{\href{https://github.com/priyavrat-misra/scifi-lorem}{Sci-fi Lorem}}} \raisebox{-0.1\height}\faExternalLink }{Jan 2021}
-          \resumeItemListStart
-            \resumeItem{\normalsize{uses a character-level language model (char-RNN) to train an AI which can generate random and somewhat meaningful sci-fi word sequences.}}
-          \resumeItemListEnd
-      \vspace{-13pt}
-          
-      \resumeProjectHeading
-          {\textbf{\large{\href{https://github.com/priyavrat-misra/image-colorization}{Image Colorization}}} \raisebox{-0.1\height}\faExternalLink }{Dec 2020}
-          \resumeItemListStart
-            \resumeItem{\normalsize{uses Deep Residual Networks trained on Places365 dataset, to colorize black \& white images.}}
-          \resumeItemListEnd
-      \vspace{-13pt}
-          
-      \resumeProjectHeading
-          {\textbf{\large{Other projects:}}}{Nov 2020}
-          \resumeItemListStart
-            \resumeItem{\normalsize{\textbf{\href{https://github.com/priyavrat-misra/neural-style-transfer}{Neural Style Transfer}}} \raisebox{-0.1\height}\faExternalLink: uses CNN's feature extraction abilities to transfer style of an image to another.}
-            \resumeItem{\normalsize{\textbf{\href{https://github.com/priyavrat-misra/convolutional-autoencoder}{Autoencoder for Image Compression}}} \raisebox{-0.1\height}\faExternalLink: reduces image size by up to 75\% after compression, \& achieves a near-lossless image quality after decompression.}
-            \resumeItem{\normalsize{\textbf{\href{https://github.com/priyavrat-misra/denoising-autoencoder}{Denoising Autoencoder}}} \raisebox{-0.1\height}\faExternalLink: constructs higher level representations of noisy images by identifying \& utilizing useful features in them.}
-          \resumeItemListEnd
-          
-    \resumeSubHeadingListEnd
-\vspace{-12pt}
+\vspace{-10 pt}
 
+\cvsect{Education}
+\begin{entrylist}
+	\entry
+	{Aug '17 -- Jul '21}
+	{Parala Maharaja Engineering College}
+	{Brahmapur, India}
+	{Bachelor of Technology in Computer Science \& Engineering.}
+	\entry
+	{Apr '05 -- Mar '17}
+	{Kendriya Vidyalaya}
+	{Brahmapur, India}
+	{Primary, Secondary and Senior Secondary Education.}
+\end{entrylist}
 
-%-----------EXPERIENCE-----------
-\section{EXPERIENCE}
-    \resumeSubHeadingListStart
-      \resumeSubheading
-        {Indian Institute of Science Education and Research (IISER)}{Feb - Mar 2020}
-        {\href{https://drive.google.com/file/d/1MjAsp7TuGCDzTJeRRi4D6GTi0dCwG9xk/view?usp=sharing}{\underline{Intern}} {\raisebox{-0.1\height}\faExternalLink}}{Brahmapur, India}
-        \resumeItemListStart
-          \resumeItem{\normalsize{made various User Interface improvements to \textit{https://www.iiserbpr.ac.in/}}}
-          \resumeItem{\normalsize{assisted in developing a dynamic search box feature which showed suggestions based on input keystrokes}}
-        \resumeItemListEnd
-    \resumeSubHeadingListEnd
-\vspace{-12pt}
+\vspace{-10 pt}
 
+\cvsect{Projects}
 
-%-----------PROGRAMMING SKILLS-----------
-\section{TECHNICAL SKILLS}
-\begin{itemize}[leftmargin=0.15in, label={}]
-	\small{\item{
-		\textbf{\normalsize{Languages:}}{ \normalsize{C, C++, Python, SQL, HTML, CSS, Markdown}} \\
-		\textbf{\normalsize{Libraries:}}{ \normalsize{Standard Template Library (C++), PyTorch, NumPy, Matplotlib, pandas}} \\
-		\textbf{\normalsize{Developer Tools:}}{ \normalsize{Linux, Vim, GNU Debugger (gdb), Valgrind, Git, Windows Terminal}} \\
-		\textbf{\normalsize{Technologies:}}{ \normalsize{Object Oriented Programming, API interaction, Version Control, Debugging, Web Development}}
-	}}
-\end{itemize}
-\vspace{-12pt}
+\begin{entrylist}
 
- 
-%-----------CERTIFICATIONS---------------
-\section{CERTIFICATIONS}
-\begin{multicols}{2}
-	\begin{itemize}[itemsep=-1pt, parsep=5pt]
-		\item {\href{https://graduation.udacity.com/confirm/ZFNDVDQU}{Deep Learning Nanodegree, \textit{Udacity}} {\raisebox{-0.1\height}\faExternalLink}}
-		\item {\href{https://www.coursera.org/account/accomplishments/specialization/EJWXYS5SBM2E}{Deep Learning Specialization, \textit{Coursera}} {\raisebox{-0.1\height}\faExternalLink}}
-		\item {\href{https://www.coursera.org/account/accomplishments/verify/DB2AH7JVG9KU}{Machine Learning, \textit{Coursera}} {\raisebox{-0.1\height}\faExternalLink}}
-		\item {\href{https://www.datacamp.com/statement-of-accomplishment/track/ca45219c995c9ea42262772e58872ae77889c14e}{Python Programmer Track, \textit{DataCamp}} {\raisebox{-0.1\height}\faExternalLink}}
-		\item {\href{https://www.coursera.org/account/accomplishments/specialization/LLHNWWQWQHQM}{AWS Fundamentals, \textit{Coursera}} {\raisebox{-0.1\height}\faExternalLink}}
-	\end{itemize}
-\end{multicols}
-\vspace*{0.5\multicolsep}
+    \project
+    {https://priyavr.at}
+    {Personal website and blogging platform built with Hugo.}
+    {\texttt{{\href{https://priyavr.at}{Site}}}\slashsep\texttt{{\href{https://github.com/priyavrat-misra/personal-website}{Code}}}}
 
+    \project
+    {poijo}
+    {Java Plain Old Java Object to Excel spreadsheet mapper library.}
+    {\texttt{{\href{https://github.com/priyavrat-misra/poijo}{Code}}}}
+    
+    \project
+    {mish}
+    {Minimal bare bone Linux shell implementation written in C.}
+    {\texttt{{\href{https://asciinema.org/a/702244}{Demo}}}\slashsep\texttt{{\href{https://github.com/priyavrat-misra/mish}{Code}}}}
 
-%-----------INVOLVEMENT---------------
-\section{EXTRACURRICULAR}
-\resumeItemListStart[itemsep=2pt]
-\resumeItem{\normalsize{Received an Udacity Deep Learning Nanodegree scholarship for excellence among 15,000 participants. (2020)}}
-\resumeItem{\normalsize{Secured Gold in a Quiz contest organized by Inspire Science Camp, Department of Science \& Technology, Government of India. (2016)}}
-\resumeItem{\normalsize{Won Silver Medal in National Science Olympiad 2014-15, School-level.}}
-\resumeItem{\normalsize{Won Gold Medal in National Science Olympiad 2013-14, School-level \& City-level.}}
-\resumeItemListEnd
+    \project
+    {amaze}
+    {Visually appealing maze generator built with C++ and SFML.}
+    {\texttt{{\href{https://github.com/priyavrat-misra/amaze}{Code}}}}
+
+    \project
+    {computime}
+    {Telegram bot using YouTube API to calculate video duration at different paces.}
+    {\texttt{{\href{https://telegram.me/iamspeed_bot}{Demo}}}\slashsep\texttt{{\href{https://github.com/priyavrat-misra/computime}{Code}}}}
+    
+	\project
+	{xrays-and-gradcam}
+	{CNN based X-ray classifier for COVID-19 and other inflammatory lung diseases.}
+    {{\texttt{\href{https://doi.org/10.1007/s11042-023-16084-4}{Paper}}}\slashsep{\texttt{\href{https://github.com/priyavrat-misra/xrays-and-gradcam}{Code}}}}
+    
+    \project
+    {image-colorizer}
+    {Convolutional Auto-encoder with residual networks to bring life to Grey-scale images.}
+    {\texttt{{\href{https://github.com/priyavrat-misra/image-colorizer}{Code}}}}
+
+    \project
+    {scifi-lorem}
+    {Character-level RNN language model to generate random sci-fi text.}
+    {\texttt{{\href{https://github.com/priyavrat-misra/scifi-lorem}{Code}}}}
+    
+\end{entrylist}
+
+\vspace{-10 pt}
+
+\begin{minipage}[t]{0.725\textwidth}
+	\cvsect{Extracurricular}
+	\vspace{-6pt}
+    \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=-1pt]
+    \item Secured third place by cycling 105 KM in \texttt{\#ADPIndiaTurns25} challenge ride. (2024)
+    \item Won ADP Global Product \& Technology (GPT) Connect Artwork Competition. (2023)
+    \item Won ADP Smart Compliance Solutions Best Ad Experience Contest. (2023)
+    \item Received an Udacity Deep Learning Nanodegree scholarship for excellence among 15,000 participants. (2020)
+    \item Secured Gold in a Quiz contest organized by Inspire Science Camp, Department of Science \& Technology, Government of India. (2016)
+    \item Won Silver Medal in National Science Olympiad 2014-15, School-level.
+    \item Won Gold Medal in National Science Olympiad 2013-14, School-level and City-level.
+    \end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.225\textwidth}
+    \begin{minipage}[t]{1\textwidth}
+    	\cvsect{Interests}
+    	\vspace{-6pt}
+        \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=-1pt]
+        \item Cycling
+        \item Blogging
+        \item Problem-solving
+        \item Gaming
+        \end{itemize}
+    \end{minipage}
+    \begin{minipage}[t]{1\textwidth}
+    	\cvsect{Languages}
+    	\vspace{-6pt}
+    	\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=-1pt]
+        \item English
+        \item Odia
+        \item Hindi
+        \end{itemize}
+    \end{minipage}
+\end{minipage}
 
 \end{document}
