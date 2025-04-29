@@ -118,7 +118,7 @@
 \setlength{\LTpost}{0pt} % Remove default whitespace after longtable
 
 \setlength{\tabcolsep}{0pt} % No spacing between table columns
-\renewcommand{\arraystretch}{0.75}
+\renewcommand{\arraystretch}{0.5}
 % Environment to hold a new list of entries
 \newenvironment{entrylist}{
 	\begin{longtable}[H]{l l}
@@ -127,10 +127,10 @@
 }
 
 \newcommand{\entry}[4]{% First argument for the leftmost date(s) text, second is for the bold entry heading, third is for the bold right-aligned entry qualifier and the fourth is for the entry description
-	\parbox[t]{0.175\textwidth}{% 17.5% of the text width of the page
+	\parbox[t]{0.16\textwidth}{% 17.5% of the text width of the page
 	   \small{#1} % Leftmost entry date(s) text
 	}
-	&\parbox[t]{0.825\textwidth}{% 82.5% of the text width of the page
+	&\parbox[t]{0.84\textwidth}{% 82.5% of the text width of the page
 		\textbf{#2}% Entry heading text
 		\hfill% Horizontal whitespace
 		{\footnotesize \textbf{\textcolor{black}{#3}}}\\% Right-aligned entry qualifier text
@@ -141,10 +141,10 @@
 \newcommand{\slashsep}{\hspace{3mm}/\hspace{3mm}}
 
 \newcommand{\project}[3]{
-    \parbox[t]{0.175\textwidth}{
+    \parbox[t]{0.16\textwidth}{
 	   \textbf{\small{#1}}
 	}%
-	&\parbox[t]{0.825\textwidth}{
+	&\parbox[t]{0.84\textwidth}{
 		#2
         \hfill
         #3
