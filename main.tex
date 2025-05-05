@@ -1,244 +1,230 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Developer CV
-% LaTeX Class
-% Version 2.0 (12/10/23)
-%
-% This class originates from:
-% http://www.LaTeXTemplates.com
-%
-% Authors:
-% Omar Roldan
-% Based on a template by  Jan Vorisek (jan@vorisek.me)
-% Based on a template by Jan Küster (info@jankuester.com)
-% Modified for LaTeX Templates by Vel (vel@LaTeXTemplates.com)
-%
-% License:
-% The MIT License (see included LICENSE file)
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[letterpaper,10pt]{article}
+\usepackage[inline]{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[margin=32pt]{geometry}
+\usepackage[none]{hyphenat}
+\usepackage{titlesec}
+\usepackage[default]{sourcesanspro}
 
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
+\input{glyphtounicode}
 
-\documentclass[9pt]{util} % Default font size, values from 8-12pt are recommended
-\usepackage{multicol}
-\usepackage{lipsum}
-\setlength{\columnsep}{0mm}
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
 
+%  suppress the appearance of the section number
+\makeatletter
+\renewcommand\@seccntformat[1]{}
+\makeatother
+
+\titlespacing*\section{0pt}{0pt}{2pt}
+\titlespacing*\subsection{0pt}{6pt}{2pt}
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% ----------- Custom Commands ------------
+\newcommand{\resumeItem}[1]{
+  \item#1}
+
+\newcommand{\resumeSubheading}[4]{
+    \item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{#3} & \textit{\small{#4}}
+    \end{tabular*}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[label={}, leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[noitemsep]}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+
+\newcommand{\project}[3]{
+    \item{
+        \parbox[t]{0.17\textwidth}{\textbf{#1}}
+        \parbox[t]{0.82\textwidth}{#2\hfill\small{#3}}}}
 
 \begin{document}
-
-\begin{minipage}[t]{0.5\textwidth} 
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
-		
-	{ \fontsize{16}{20} \textcolor{black}{\textbf{\MakeUppercase{Priyavrat Misra}}}}
-		
-	\vspace{6pt}
-		
-	{\Large Software Engineer}
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.2\textwidth} % 20% of the page width for the first row of icons
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
-		
-	% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
-	\icon{Globe}{11}{\href{https://priyavr.at}{https://priyavr.at}}\\ 
-	\icon{Phone}{11}{+91 84804 42313}\\
-	\icon{MapMarker}{11}{Hyderabad, India}\\
-		
-\end{minipage}
-\begin{minipage}[t]{0.27\textwidth} % 27% of the page width for the second row of icons
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
-		
-	\icon{Envelope}{11}{\href{mailto:priyavratmisra123@gmail.com}{priyavratmisra123@gmail.com}}\\	
-	\icon{Github}{11}{\href{https://github.com/priyavrat-misra}{@priyavrat-misra}}\\
-	\icon{LinkedinSquare}{11}{\href{https://www.linkedin.com/in/priyavrat-misra}{@priyavrat-misra}}\\    
-	    
-\end{minipage}
-
-\vspace{-10pt}
-
-\begin{minipage}[t]{0.475\textwidth}
-	\cvsect{About}
-	\vspace{-6pt}
-	 
-	Software Engineer with a CS background, specializing in writing clean and efficient code. Passionate about accessibility, algorithms, and deepening understanding of systems and architecture, alongside an enthusiasm for blogging learnings and scrutinizing open-source software.
-	
-\end{minipage}
-\hfill % Whitespace between
-\begin{minipage}[t]{0.475\textwidth}
-	\cvsect{Technical Expertise}
-	\vspace{-6pt}
-	    
-	\begin{minipage}[t]{0.2\textwidth}
-		\textbf{Languages:}
-	\end{minipage}
-	\hfill
-	\begin{minipage}[t]{0.73\textwidth}
-		Java, C++, JavaScript, TypeScript, SQL, MQL, HTML, CSS, Markdown.  
-	\end{minipage}
-	\vspace{1mm}
-	    
-	\begin{minipage}[t]{0.2\textwidth}
-		\textbf{Frameworks:}
-	\end{minipage}
-	\hfill
-	\begin{minipage}[t]{0.73\textwidth}
-		Spring Boot, Angular, JUnit.
-	\end{minipage}
-	\vspace{1mm}
-	    
-	\begin{minipage}[t]{0.2\textwidth}
-		\textbf{Libraries:}
-	\end{minipage}
-	\hfill
-	\begin{minipage}[t]{0.73\textwidth}
-		RxJS, SLF4J, assertj, Apache POI.
-	\end{minipage}
-	\vspace{1mm}
-	       
-	\begin{minipage}[t]{0.2\textwidth}
-		\textbf{Tools:}
-	\end{minipage}
-	\hfill
-	\begin{minipage}[t]{0.73\textwidth}
-		Vim, Git, Make, Maven, axe DevTools.
-	\end{minipage}
-	\vspace{1mm}
-	    
-\end{minipage}
-
-\vspace{-10 pt}
-
-\cvsect{Experience}
-\begin{entrylist}
-	\entry
-	{{Jan '23 -- Present} \\\footnotesize{Hyderabad, India}}
-	{Member Technical -- Global Product \& Technology (GPT)}
-	{Automatic Data Processing, Inc.}
-	{\vspace{-10pt}
-		\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=-1pt]
-            \item Played a key role in streamlining the migration process for 76,850 ADP Workforce Now clients from Wage Garnishment Processing Service to comprehensive Full-Service Wage Garnishment offering, reducing migration time from 12-16 weeks to under 2 weeks, and unlocking \$20M in revenue.
-            \item Entrusted with individual ownership to enhance ADP SmartCompliance onboarding, for enabling parallel onboarding with ADP Human Capital Management (HCM) systems (Workforce Now, Vantage, and Lyric), implementing efficient webhooks and APIs to streamline data exchange, automate client information pre-population, and substantially reduce onboarding time.
-            \item Facilitated smooth onboarding of Oracle Cloud HCM clients to ADP SmartCompliance Employment Verification services by securely capturing client credentials for HCM integration.
-			\item Contributed to the development of a web-based onboarding application designed to enhance client interactions with ADP SmartCompliance offerings.
-			\item Designed and implemented efficient APIs and optimized DML queries to facilitate seamless data exchange between multiple systems of records, ensuring robust integration and streamlined data flow.
-			\item Crafted responsive website interfaces that provided an intuitive and responsive user experience, prioritizing ease of use, accessibility, and overall usability.
-		\end{itemize}
-		\texttt{Java + Spring Boot} \slashsep \texttt{TypeScript + Angular} \slashsep \texttt{Oracle DB} \slashsep \texttt{MongoDB}}
-	\entry
-	{{Feb '20 -- Mar '20} \\\footnotesize{Brahmapur, India}}
-	{Intern}
-	{Indian Institute of Science Education and Research}
-	{\vspace{-10pt}
-		\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=-1pt]
-			\item Contributed to enhancing the user interface of \textit{iiserbpr.ac.in}, improving usability and visual design for a more seamless user experience.
-			\item Collaborated closely with senior engineers, participating in educational sessions and gaining hands-on experience with industry-standard tools and technologies.
-		\end{itemize}
-		\texttt{Java} \slashsep \texttt{JavaScript} \slashsep \texttt{HTML} \slashsep \texttt{CSS}}
-\end{entrylist}
-
-\vspace{-10 pt}
-
-\cvsect{Education}
-\begin{entrylist}
-	\entry
-	{Aug '17 -- Jul '21}
-	{Parala Maharaja Engineering College}
-	{Brahmapur, India}
-	{Bachelor of Technology in Computer Science \& Engineering.}
-	\entry
-	{Apr '05 -- Mar '17}
-	{Kendriya Vidyalaya}
-	{Brahmapur, India}
-	{Primary, Secondary and Senior Secondary Education.}
-\end{entrylist}
-
-\vspace{-10 pt}
-
-\cvsect{Projects}
-
-\begin{entrylist}
-
-    \project
-    {https://priyavr.at}
-    {Personal website and blogging platform built with Hugo.}
-    {\texttt{{\href{https://priyavr.at}{Site}}}\slashsep\texttt{{\href{https://github.com/priyavrat-misra/personal-website}{Code}}}}
-
-    \project
-    {poijo}
-    {Java library with a fluent, annotation-driven API for working with Excel spreadsheets.}
-    {\texttt{{\href{https://github.com/priyavrat-misra/poijo}{Code}}}}
-    
-    \project
-    {mish}
-    {Minimal bare bone Linux shell implementation written in C.}
-    {\texttt{{\href{https://asciinema.org/a/702244}{Demo}}}\slashsep\texttt{{\href{https://github.com/priyavrat-misra/mish}{Code}}}}
-
-    \project
-    {amaze}
-    {Visually appealing maze generator built with C++ and SFML.}
-    {\texttt{{\href{https://github.com/priyavrat-misra/amaze}{Code}}}}
-
-    \project
-    {computime}
-    {Telegram bot using YouTube API to calculate video duration at different paces.}
-    {\texttt{{\href{https://telegram.me/iamspeed_bot}{Demo}}}\slashsep\texttt{{\href{https://github.com/priyavrat-misra/computime}{Code}}}}
-    
-	\project
-	{xrays-and-gradcam}
-	{CNN based X-ray classifier for COVID-19 and other inflammatory lung diseases.}
-    {{\texttt{\href{https://doi.org/10.1007/s11042-023-16084-4}{Paper}}}\slashsep{\texttt{\href{https://github.com/priyavrat-misra/xrays-and-gradcam}{Code}}}}
-    
-    \project
-    {image-colorizer}
-    {Convolutional Auto-encoder with residual networks to bring life to Grey-scale images.}
-    {\texttt{{\href{https://github.com/priyavrat-misra/image-colorizer}{Code}}}}
-
-    \project
-    {scifi-lorem}
-    {Character-level RNN language model to generate random sci-fi text.}
-    {\texttt{{\href{https://github.com/priyavrat-misra/scifi-lorem}{Code}}}}
-    
-\end{entrylist}
-
-\vspace{-10 pt}
-
-\begin{minipage}[t]{0.725\textwidth}
-	\cvsect{Extracurricular}
-	\vspace{-6pt}
-    \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=-1pt]
-    \item Secured third place by cycling 105 KM in \texttt{\#ADPIndiaTurns25} challenge ride. (2024)
-    \item Won ADP Global Product \& Technology (GPT) Connect Artwork Competition. (2023)
-    \item Won ADP Smart Compliance Solutions Best Ad Experience Contest. (2023)
-    \item Received an Udacity Deep Learning Nanodegree scholarship for excellence among 15,000 participants. (2020)
-    \item Secured Gold in a Quiz contest organized by Inspire Science Camp, Department of Science \& Technology, Government of India. (2016)
-    \item Won Silver Medal in National Science Olympiad 2014-15, School-level.
-    \item Won Gold Medal in National Science Olympiad 2013-14, School-level and City-level.
+    \section{\huge{Priyavrat Misra}}
+    \begin{enumerate*}[label={}, itemjoin={\quad}]
+        \item{Hyderabad, India}
+        \item{+91XXXXXXXX13}
+        \item{\href{https://priyavr.at}{[Website]}}
+        \item{\href{mailto:priyavratmisra123@gmail.com}{[Mail]}}
+        \item{\href{https://linkedin.com/in/priyavrat-misra}{[LinkedIn]}}
+        \item{\href{https://github.com/priyavrat-misra}{[GitHub]}}
+    \end{enumerate*}
+    \subsection{Summary}
+        Software Engineer with a Computer Science background, specializing in writing clean and efficient code. Passionate about accessibility, algorithms, operating systems, and computer architecture, alongside an enthusiasm for blogging and open-source software.
+    \subsection{Skills}
+    \begin{itemize}[noitemsep, label={}, leftmargin=*]
+        \item{
+            \textbf{Programming, Query \& Markup Languages} :
+            \begin{enumerate*}[label={}, itemjoin={{, }}]
+                \item Java
+                \item C++
+                \item JavaScript
+                \item TypeScript
+                \item SQL
+                \item MongoDB
+                \item HTML
+                \item CSS
+                \item Markdown
+            \end{enumerate*}}
+        \item{
+            \textbf{Frameworks \& Libraries} :
+            \begin{enumerate*}[label={}, itemjoin={{, }}]
+                \item Spring Boot
+                \item JUnit
+                \item Angular
+                \item RxJS
+                \item SLF4J
+                \item AssertJ
+                \item Apache POI
+                \item Jackson
+                \item OpenAPI (Swagger)
+            \end{enumerate*}}
+        \item{
+            \textbf{Development Tools} :
+            \begin{enumerate*}[label={}, itemjoin={{, }}]
+                \item Vim
+                \item Git
+                \item cURL
+                \item GNU Make
+                \item Apache Maven
+                \item Accessibility Tools (axe DevTools)
+                \item Splunk
+            \end{enumerate*}}
+        \item{
+            \textbf{Other Skills} :
+            \begin{enumerate*}[label={}, itemjoin={{, }}]
+                \item Problem Solving
+                \item Unit Testing
+                \item Technical Documentation
+                \item Web Accessibility (WCAG 2.2)
+            \end{enumerate*}}
     \end{itemize}
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.225\textwidth}
-    \begin{minipage}[t]{1\textwidth}
-    	\cvsect{Interests}
-    	\vspace{-6pt}
-        \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=-1pt]
-        \item Cycling
-        \item Blogging
-        \item Problem-solving
-        \item Gaming
-        \end{itemize}
-    \end{minipage}
-    \begin{minipage}[t]{1\textwidth}
-    	\cvsect{Languages}
-    	\vspace{-6pt}
-    	\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=-1pt]
-        \item English
-        \item Odia
-        \item Hindi
-        \end{itemize}
-    \end{minipage}
-\end{minipage}
-
+    \subsection{Experience}
+    \resumeSubHeadingListStart
+        \resumeSubheading
+        {ADP}{Jan 2023 -- Present}
+        {Member Technical -- Global Product \& Technology (GPT)}{Hyderabad, Telangana}
+        \resumeItemListStart
+            \resumeItem{Took individual ownership to enhance ADP SmartCompliance for parallel onboarding with ADP HCM systems (Workforce Now, Lyric, Vantage, TotalSource, GlobalView, and Enterprise). Implemented efficient, asynchronous event handler webhooks and APIs to streamline data exchange, automate client information population, and substantially reduce onboarding time.}
+            \resumeItem{Contributed significantly in streamlining the migration process of 76,850 ADP Workforce Now clients from Wage Garnishment Processing Service to Full-Service Wage Garnishment, reducing migration time from 12–16 weeks to under 2 weeks and generating \$20M in revenue.}
+            \resumeItem{Enabled seamless onboarding of Oracle Fusion Cloud HCM clients to ADP SmartCompliance Employment Verification services by securely capturing client data and credentials for HCM integration.}
+            \resumeItem{Developed intuitive and responsive user interfaces for ADP SmartCompliance, prioritizing accessibility and usability.}
+        \resumeItemListEnd
+        \resumeSubheading
+        {Indian Institute of Science Education and Research}{Feb 2020 -- Mar 2020}
+        {Intern}{Brahmapur, Odisha}
+        \resumeItemListStart
+            \resumeItem{Enhanced the user interface of iiserbpr.ac.in, improving usability and visual design for a seamless experience.}
+            \resumeItem{Collaborated with senior engineers and participated in educational sessions, gaining hands-on experience with industry-standard tools and technologies.}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
+    \subsection{Education}
+    \resumeSubHeadingListStart
+        \resumeSubheading
+        {Parala Maharaja Engineering College}{Aug 2017 -- Jul 2021}
+        {Bachelor of Technology in Computer Science and Engineering}{Brahmapur, Odisha}
+        \resumeItemListStart
+            \resumeItem{
+                \textbf{Relevant Coursework} :
+                \begin{enumerate*}[label={}, itemjoin={{, }}]
+                    \item Data Structures and Algorithms
+                    \item Discrete Mathematics
+                    \item Operating Systems
+                    \item Computer Networks
+                    \item Databases
+                    \item Computer Organization and Architecture
+                \end{enumerate*}}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
+    \subsection{Projects}
+    \begin{itemize}[noitemsep, label={}, leftmargin=*]
+        \project
+        {https://priyavr.at}
+        {Personal website and blogging platform built with Hugo.}
+        {
+            \begin{enumerate*}[label={}, itemjoin={\quad}]
+                \item{\href{https://priyavr.at}{[Site]}}
+                \item{\href{https://github.com/priyavrat-misra/personal-website}{[Code]}}
+            \end{enumerate*}
+        }
+        \project
+        {poijo}
+        {Java library with a fluent, annotation-driven API for working with Excel spreadsheets.}
+        {
+            \begin{enumerate*}[label={}, itemjoin={\quad}]
+                \item{\href{https://github.com/priyavrat-misra/poijo}{[Code]}}
+            \end{enumerate*}
+        }
+        \project
+        {mish}
+        {Lightweight Linux shell implemented in C with basic command execution.}
+        {
+            \begin{enumerate*}[label={}, itemjoin={\quad}]
+                \item{\href{https://asciinema.org/a/702244}{[Demo]}}
+                \item{\href{https://github.com/priyavrat-misra/mish}{[Code]}}
+            \end{enumerate*}
+        }
+        \project
+        {amaze}
+        {Visually appealing maze generator built with C++ and SFML.}
+        {
+            \begin{enumerate*}[label={}, itemjoin={\quad}]
+                \item{\href{https://github.com/priyavrat-misra/amaze}{[Code]}}
+            \end{enumerate*}
+        }
+        \project
+        {computime}
+        {Telegram bot that estimates YouTube video duration at custom playback speeds.}
+        {
+            \begin{enumerate*}[label={}, itemjoin={\quad}]
+                \item{\href{https://telegram.me/iamspeed_bot}{[Demo]}}
+                \item{\href{https://github.com/priyavrat-misra/computime}{[Code]}}
+            \end{enumerate*}
+        }
+    	\project
+    	{xrays-and-gradcam}
+    	{CNN based X-ray classifier for COVID-19 and other inflammatory lung diseases.}
+        {
+            \begin{enumerate*}[label={}, itemjoin={\quad}]
+                \item{\href{https://doi.org/10.1007/s11042-023-16084-4}{[Paper]}}
+                \item{\href{https://github.com/priyavrat-misra/xrays-and-gradcam}{[Code]}}
+            \end{enumerate*}
+        }
+        \project
+        {image-colorizer}
+        {Convolutional Autoencoder model with residual networks to colorize grayscale images.}
+        {
+            \begin{enumerate*}[label={}, itemjoin={\quad}]
+                \item{\href{https://github.com/priyavrat-misra/image-colorizer}{[Code]}}
+            \end{enumerate*}
+        }
+        \project
+        {scifi-lorem}
+        {Character-level RNN for generating synthetic science fiction text samples.}
+        {
+            \begin{enumerate*}[label={}, itemjoin={\quad}]
+                \item{\href{https://github.com/priyavrat-misra/scifi-lorem}{[Code]}}
+            \end{enumerate*}
+        }
+    \end{itemize}
+    \subsection{Awards \& Activities}
+    \begin{itemize}[noitemsep, leftmargin=*]
+        \item{Secured third place by cycling 105 KM in \textit{\#ADPIndiaTurns25} challenge ride (2024).}
+        \item{Winner, ADP Global Product and Technology (GPT) Connect Artwork Competition (2023).}
+        \item{Winner, ADP SmartCompliance Solutions Best Ad Experience Contest (2023).}
+        \item{Recipient, Udacity Deep Learning Nanodegree Scholarship (2020), awarded to top 5\% performers among 15,000 participants.}
+        \item{Gold Medalist, Quiz organized by Inspire Science Camp, Department of Science and Technology, Government of India (2016).}
+        \item{Silver Medalist, National Science Olympiad 2014-15, School-level.}
+        \item{Gold Medalist, National Science Olympiad 2013-14, School-level and City-level.}
+    \end{itemize}
 \end{document}
