@@ -1,11 +1,21 @@
 \documentclass[letterpaper,10pt]{article}
 \usepackage[inline]{enumitem}
-\usepackage[hidelinks]{hyperref}
+\usepackage{hyperref}
 \usepackage{fancyhdr}
 \usepackage[margin=32pt]{geometry}
 \usepackage[none]{hyphenat}
 \usepackage{titlesec}
 \usepackage[default]{sourcesanspro}
+\usepackage{etoolbox}
+
+\hypersetup{
+    colorlinks=true,
+    urlcolor=blue,
+    pdftitle={Priyavrat Misra's Résumé},
+    pdfauthor={Priyavrat Misra},
+    pdfsubject={Priyavrat Misra's ever-evolving Résumé.},
+    pdfkeywords={Software Engineer, Java, Spring Boot, SQL, Apache Kafka, Redis, Angular, Microservices, Docker, WCAG, WAI-ARIA}
+}
 
 \input{glyphtounicode}
 
@@ -30,14 +40,24 @@
 \newcommand{\resumeItem}[1]{
   \item#1}
 
-\newcommand{\resumeSubheading}[4]{
-    \item
+\newcommand{\resumeExperience}[8]{
+  \item
+  \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{#3} & \textit{\small{#4}} \\
+  \end{tabular*}
+  #5
+  % Conditionally add the previous role if #6 (Previous Role) is not empty
+  \ifstrempty{#6}{}{%
     \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{#3} & \textit{\small{#4}}
-    \end{tabular*}}
+      \textit{#6} & \textit{\small{#7}} \\
+    \end{tabular*}
+    #8
+  }
+}
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand{\arraystretch}{1.2}  % spacing between table rows
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[label={}, leftmargin=*]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
@@ -53,103 +73,101 @@
     \section{\huge{Priyavrat Misra}}
     \begin{enumerate*}[label={}, itemjoin={\quad}]
         \item{Hyderabad, India}
-        \item{+91XXXXXXXX13}
-        \item{\href{https://priyavr.at}{[Website]}}
-        \item{\href{mailto:priyavratmisra123@gmail.com}{[Mail]}}
+        \item{+91XXXXXXXX24}
+        \item{\href{mailto:misra.priyavrat@gmail.com}{misra.priyavrat@gmail.com}}
+        \item{\url{https://priyavr.at/}}
         \item{\href{https://linkedin.com/in/priyavrat-misra}{[LinkedIn]}}
         \item{\href{https://github.com/priyavrat-misra}{[GitHub]}}
     \end{enumerate*}
-    \subsection{Summary}
-        Software Engineer with a Computer Science background, specializing in writing clean and efficient code. Passionate about accessibility, algorithms, operating systems, and computer architecture, alongside an enthusiasm for blogging and open-source software.
     \subsection{Skills}
     \begin{itemize}[noitemsep, label={}, leftmargin=*]
         \item{
-            \textbf{Programming, Query \& Markup Languages} :
+            \textbf{Backend} :
             \begin{enumerate*}[label={}, itemjoin={{, }}]
                 \item Java
-                \item C++
+                \item SQL
+                \item Spring Boot
+                \item Spring Data JPA
+                \item Spring Data MongoDB
+                \item Apache Kafka
+                \item The OpenAPI Specification
+            \end{enumerate*}}
+        \item{
+            \textbf{Databases \& Caching} :
+            \begin{enumerate*}[label={}, itemjoin={{, }}]
+                \item Oracle Database
+                \item MongoDB
+                \item Redis
+                \item Hazelcast
+            \end{enumerate*}}
+        \item{
+            \textbf{Frontend} :
+            \begin{enumerate*}[label={}, itemjoin={{, }}]
                 \item JavaScript
                 \item TypeScript
-                \item SQL
-                \item MongoDB
-                \item HTML
-                \item CSS
-                \item Markdown
-            \end{enumerate*}}
-        \item{
-            \textbf{Frameworks \& Libraries} :
-            \begin{enumerate*}[label={}, itemjoin={{, }}]
-                \item Spring Boot
-                \item JUnit
                 \item Angular
                 \item RxJS
-                \item SLF4J
-                \item AssertJ
-                \item Apache POI
-                \item Jackson
-                \item OpenAPI (Swagger)
+                \item HTML
+                \item CSS
+                \item WCAG 2.2
+                \item The WAI-ARIA Specification
             \end{enumerate*}}
         \item{
-            \textbf{Development Tools} :
+            \textbf{DevOps \& Tools} :
             \begin{enumerate*}[label={}, itemjoin={{, }}]
-                \item Vim
                 \item Git
-                \item cURL
-                \item GNU Make
                 \item Apache Maven
-                \item Accessibility Tools (axe DevTools)
+                \item Docker
+                \item WSL
                 \item Splunk
-            \end{enumerate*}}
-        \item{
-            \textbf{Other Skills} :
-            \begin{enumerate*}[label={}, itemjoin={{, }}]
-                \item Problem Solving
-                \item Unit Testing
-                \item Technical Documentation
-                \item Web Accessibility (WCAG 2.2)
+                \item Liquibase
+                \item Vim
+                \item cURL
+                \item Markdown
+                \item YAML
             \end{enumerate*}}
     \end{itemize}
     \subsection{Experience}
     \resumeSubHeadingListStart
-        \resumeSubheading
-        {ADP}{Jan 2023 -- Present}
-        {Member Technical -- Global Product \& Technology (GPT)}{Hyderabad, Telangana}
-        \resumeItemListStart
-            \resumeItem{Took individual ownership to enhance ADP SmartCompliance for parallel onboarding with ADP HCM systems (Workforce Now, Lyric, Vantage, TotalSource, GlobalView, and Enterprise). Implemented efficient, asynchronous event handler webhooks and APIs to streamline data exchange, automate client information population, and substantially reduce onboarding time.}
-            \resumeItem{Contributed significantly in streamlining the migration process of 76,850 ADP Workforce Now clients from Wage Garnishment Processing Service to Full-Service Wage Garnishment, reducing migration time from 12–16 weeks to under 2 weeks and generating \$20M in revenue.}
-            \resumeItem{Enabled seamless onboarding of Oracle Fusion Cloud HCM clients to ADP SmartCompliance Employment Verification services by securely capturing client data and credentials for HCM integration.}
-            \resumeItem{Developed intuitive and responsive user interfaces for ADP SmartCompliance, prioritizing accessibility and usability.}
-        \resumeItemListEnd
-        \resumeSubheading
-        {Indian Institute of Science Education and Research}{Feb 2020 -- Mar 2020}
-        {Intern}{Brahmapur, Odisha}
-        \resumeItemListStart
-            \resumeItem{Enhanced the user interface of iiserbpr.ac.in, improving usability and visual design for a seamless experience.}
-            \resumeItem{Collaborated with senior engineers and participated in educational sessions, gaining hands-on experience with industry-standard tools and technologies.}
-        \resumeItemListEnd
+        \resumeExperience
+        {Automatic Data Processing, Inc. (ADP)}{Hyderabad, Telangana}
+        {Senior Software Engineer}{Sep 2025 -- Present}
+        {
+            \resumeItemListStart
+                \resumeItem{Architected and developed RESTful APIs for a strategic organization-wide data unification initiative, surfacing existing client data to accelerate cross-selling. Built the accompanying user interfaces, enabling data reuse for new product adoption and drastically reducing data collection and onboarding time.}
+            \resumeItemListEnd
+        }
+        {Software Engineer}{Jan 2023 -- Aug 2025}
+        {
+            \resumeItemListStart
+                \resumeItem{Took individual ownership to enhance ADP SmartCompliance for parallel onboarding with ADP HCM systems (Workforce Now, Lyric, Vantage, and Enterprise), wherein implemented efficient, asynchronous webhooks and RESTful APIs to automate data exchange and client information population, reducing client onboarding time by over 30\%.}
+                \resumeItem{Contributed to streamlining the migration process of 76,850 ADP Workforce Now clients from Wage Garnishment Processing Service to Comprehensive Service, cutting migration timelines by over 85\%, from 16 weeks to under 2 weeks.}
+                \resumeItem{Developed user interfaces for ADP SmartCompliance, ensuring strict adherence to WCAG 2.2 AA and the WAI-ARIA specification.}
+            \resumeItemListEnd
+        }
+        \resumeExperience
+        {Indian Institute of Science Education and Research (IISER)}{Brahmapur, Odisha}
+        {Intern}{Feb 2020 -- Mar 2020}
+        {
+            \resumeItemListStart
+                \resumeItem{Enhanced the user interface of \url{www.iiserbpr.ac.in}, improving usability and visual design for a seamless experience.}
+                \resumeItem{Collaborated with senior engineers and participated in educational sessions, gaining hands-on experience with industry-standard tools and technologies.}
+            \resumeItemListEnd
+        }
+        {}{}{}
     \resumeSubHeadingListEnd
     \subsection{Education}
     \resumeSubHeadingListStart
-        \resumeSubheading
-        {Parala Maharaja Engineering College}{Aug 2017 -- Jul 2021}
-        {Bachelor of Technology in Computer Science and Engineering}{Brahmapur, Odisha}
-        \resumeItemListStart
-            \resumeItem{
-                \textbf{Relevant Coursework} :
-                \begin{enumerate*}[label={}, itemjoin={{, }}]
-                    \item Data Structures and Algorithms
-                    \item Discrete Mathematics
-                    \item Operating Systems
-                    \item Computer Networks
-                    \item Databases
-                    \item Computer Organization and Architecture
-                \end{enumerate*}}
-        \resumeItemListEnd
+        \item
+            \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+              \textbf{Parala Maharaja Engineering College (affiliated to Biju Patnaik University of Technology)} & {Brahmapur, Odisha} \\
+              \textit{Bachelor of Technology in Computer Science and Engineering} & \textit{\small{Aug 2017 -- Jul 2021}}
+            \end{tabular*}
     \resumeSubHeadingListEnd
     \subsection{Projects}
     \begin{itemize}[noitemsep, label={}, leftmargin=*]
         \project
-        {https://priyavr.at}
+        {priyavr.at}
         {Personal website and blogging platform built with Hugo.}
         {
             \begin{enumerate*}[label={}, itemjoin={\quad}]
@@ -219,6 +237,7 @@
     \end{itemize}
     \subsection{Awards \& Activities}
     \begin{itemize}[noitemsep, leftmargin=*]
+        \item{Secured third spot in Hacktoberfest DigitalOcean Gradient AI Hackathon, Hyderabad. (2025)}
         \item{Secured third place by cycling 105 KM in \textit{\#ADPIndiaTurns25} challenge ride (2024).}
         \item{Winner, ADP Global Product and Technology (GPT) Connect Artwork Competition (2023).}
         \item{Winner, ADP SmartCompliance Solutions Best Ad Experience Contest (2023).}
@@ -228,3 +247,4 @@
         \item{Gold Medalist, National Science Olympiad 2013-14, School-level and City-level.}
     \end{itemize}
 \end{document}
+
